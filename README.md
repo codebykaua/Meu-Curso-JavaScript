@@ -1,2 +1,2 @@
 # Meu-Curso-JavaScript
-Minha trajetoria e projetos em JavaScript durante meu curso
+Minha trajetóia e projetos em JavaScript durante meu curso
