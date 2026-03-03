@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 10 - Eventos</title>
+</head>
+<body>
+    
+
+
+    <button id="btn-confirma" onclick="compuatarVoto()"> 
+            Confirmar Voto
+    </button>
+
+    <script>
+
+        let areaBotao = window.document.getElementById('btn-confirma')
+
+        function compuatarVoto() {
+            areaBotao.style.color = 'green'
+            areaBotao.innerText = "Fim"
+        }
+
+    </script>
+
+
+
+</body>
+</html>

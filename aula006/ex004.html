@@ -23,12 +23,14 @@
 
 
     <script>
-        var name = window.prompt("Qual é seu nome?") //Perguntar algo
-        
-        window.alert("É um grande prazer em te conhecer, " + name ) //Concatenação
+        var n1 = window.prompt('Digite um número: ')
+        var n2 = window.prompt('Digite outro número: ')
+ 
+
+        var soma = Number(n1) +  Number(n2) //Precisa ser adicionado o Number(n)  para que o script reconheca que se trata de numeros, colocando isso o script se vira em saber se é inteiro ou decimal.
+
+        window.alert('A soma dos valores é: ' + soma)
     </script>
-
-
 
 </body>
 </html>

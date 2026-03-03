@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Nacionalidade</title>
+
+    <style>
+        /* Estilo para a página inteira */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6; /* Um cinza bem clarinho */
+            color: #333;
+            text-align: center; /* Centraliza tudo */
+            padding-top: 50px;
+        }
+
+        /* Título principal */
+        h1 {
+            color: #2c3e50; /* Azul escuro elegante */
+        }
+
+        /* Estilo da caixinha de digitar (input text) */
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 5px; /* Bordas arredondadas */
+            outline: none;
+            width: 250px;
+            transition: border-color 0.3s;
+        }
+
+        /* Quando o usuário clica na caixinha para digitar */
+        input[type="text"]:focus {
+            border-color: #27ae60; /* Fica verde */
+        }
+
+        /* Estilo do Botão */
+        input[type="button"] {
+            background-color: #27ae60; /* Verde bonito */
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.1s;
+        }
+
+        /* Efeito quando passa o mouse por cima do botão */
+        input[type="button"]:hover {
+            background-color: #219150; /* Verde mais escuro */
+        }
+
+        /* Efeito de clique no botão (dá uma "afundadinha") */
+        input[type="button"]:active {
+            transform: scale(0.95);
+        }
+
+        /* Área do Resultado */
+        div#resultado {
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombreado leve */
+            max-width: 400px;
+            font-size: 18px;
+            display: none; /* Começa escondido, o JS vai mostrar depois */
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Cupom 🎟️</h1>
+    <p>Digite seu Cupom</p>
+    <p>
+        <input type="text" id="textcupom" placeholder="Ex: Promo10">
+        <input type="button" value="Verificar" onclick="verificar()">
+    </p>
+
+    <div id="resultado"></div>
+
+
+
+
+
+
+    <script>
+        function verificar() {
+    let txtp = document.querySelector('input#textcupom')
+    let res = document.querySelector('div#resultado')
+    let cupom = txtp.value
+    
+    // Faz a caixinha do resultado aparecer na tela
+    res.style.display = 'block'
+    
+    res.innerHTML = `<p>Seu Cupom é <strong>${cupom}</strong>.</p>`
+    
+    if (cupom.toUpperCase() === "PROMO10") {
+        res.innerHTML += "<p>Portanto, Você recebeu 10% de desconto. </p>"
+    } else {
+        res.innerHTML += "<p>Seu cupom é invalido, portanto, não houve desconto.</p>"
+    }
+}
+    </script>
+</body>
+</html>
